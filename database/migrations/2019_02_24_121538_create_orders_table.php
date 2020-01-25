@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->text('address');
             $table->string('city');
             $table->string('phone');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->text('details');
             $table->boolean('status')->default(0);
             $table->timestamps();

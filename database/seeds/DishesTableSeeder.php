@@ -12,10 +12,9 @@ class DishesTableSeeder extends Seeder
     public function run()
     {
         $title1 = 'Beef Burger';
-        $title2 = 'Spanish Salsa';
+        $title2 = 'Pasta';
         $title3 = 'Japanesse Sushi';
-        $title4 = 'Lemonade';
-        $title5 = 'Peeno Pizza';
+        $title4 = 'Peeno Pizza';
 
         $dish1 = Dish::create([
         	'title' => $title1,
@@ -40,25 +39,17 @@ class DishesTableSeeder extends Seeder
         	'slug' => str_slug($title3),
         	'details' => 'Onion, Lemon, xyz',
         	'image' => 'sushi.jpg',
-        	'category_id' => 3,
-        	'price' => 120
-        ]);
-
-        $dish4 = Dish::create([
-        	'title' => $title4,
-        	'slug' => str_slug($title4),
-        	'details' => 'Lemon, soda',
-        	'image' => 'Lemonade.png',
         	'category_id' => 4,
         	'price' => 120
         ]);
 
-        $dish5 = Dish::create([
-        	'title' => $title5,
-        	'slug' => str_slug($title5),
+
+        $dish4 = Dish::create([
+        	'title' => $title4,
+        	'slug' => str_slug($title4),
         	'details' => 'Onion, Lemon, Olive, Chesse',
         	'image' => 'pizza.jpg',
-        	'category_id' => 5,
+        	'category_id' => 3,
         	'price' => 120
         ]);
     }

@@ -28,10 +28,10 @@ class FrontController extends Controller
      */
     public function menu() {
         $burgers = Category::find(1);
-        $salsa = Category::find(2);
-        $sushi = Category::find(3);
-        $pizzas = Category::find(4);
-        return view('user.menu', compact('burgers', 'salsa', 'pizzas', 'sushi'));
+        $pastas = Category::find(2);
+        $sushi = Category::find(4);
+        $pizzas = Category::find(3);
+        return view('user.menu', compact('burgers', 'pastas', 'pizzas', 'sushi'));
     }
 
 
@@ -43,8 +43,10 @@ class FrontController extends Controller
      */
     public function show() {
         $id = auth()->user()->id;
-        $user = User::where('id', $id)->first();
-        return view('user.front.track', compact('user'));
+        // $user = User::where('id', $id)->first();
+        
+        $orders = Order::where('user_id', $id)->orderBy('id', 'desc')->get();
+        return view('user.front.track', compact('orders'));
     }
 
     /**

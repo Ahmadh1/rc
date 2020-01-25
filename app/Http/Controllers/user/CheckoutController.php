@@ -46,19 +46,19 @@ class CheckoutController extends Controller
          */
         $order = Order::create([
             'user_id' => Auth::user()->id,
-                'address' => $request->address,
-                'phone' => $request->phone,
-                'city' => $request->city,
-                'email' => $request->email,
-                    'details' => $request->details
+            'address' => $request->address,
+            'phone'   => $request->phone,
+            'city'    => $request->city,
+            'email'   => $request->email,
+            'details' => $request->details
         ]);
 
         foreach (Cart::instance('default')->content() as $item) {
             OrderItems::create([
-                'order_id'  => $order->id,
-                    'dish_id' => $item->model->id,
-                        'quantity' => $item->qty,
-                            'price' => Cart::total()
+                'order_id'   => $order->id,
+                'dish_id' => $item->model->id,
+                'quantity'   => $item->qty,
+                'price'      => Cart::total()
             ]);
         }
         Cart::instance('default')->destroy();

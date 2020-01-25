@@ -84,22 +84,46 @@
                         <tr>
                           <td>
                             @foreach ($order->dishes as $dish)
-                               {{ $dish->title }}
+                            <table>
+                              <tr>
+                                <td>
+                                  {{ $dish->title }}
+                                </td>
+                              </tr>
+                            </table>
                             @endforeach
                           </td>
                           <td>
                              @foreach ($order->OrderItems as $item)    
-                              {{ $item->price }}
+                             <table>
+                               <tr>
+                                 <td>
+                                  {{ $item->price }}
+                                 </td>
+                               </tr>
+                             </table>
                              @endforeach
                           </td>
                           <td>
                             @foreach ($order->orderItems as $item)
-                             {{ $item->quantity }}
+                            <table>
+                              <tr>
+                                <td>
+                                  {{ $item->quantity }}
+                                </td>
+                              </tr>
+                            </table>
                             @endforeach
                           </td>
                           <td>
                             @foreach ($order->dishes as $dish)   
-                             <img src="{{ url('uploads') . '/' . $dish->image }}" alt="" style="width: 50px;">
+                            <table>
+                              <tr>
+                                <td>
+                                  <img src="{{ url('uploads') . '/' . $dish->image }}" alt="" style="width: 50px;">
+                                </td>
+                              </tr>
+                            </table>
                             @endforeach
                           </td>
                         </tr>

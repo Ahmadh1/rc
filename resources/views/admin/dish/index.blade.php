@@ -45,7 +45,7 @@
                    @endif
                 </div>
                 <div class="card-footer">
-                    <a href="{{ route('home') }}">back to home</a>
+                    <a href="{{ route('dashboard') }}">back to home</a>
                 </div>
 
 

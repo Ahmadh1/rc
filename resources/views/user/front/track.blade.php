@@ -26,11 +26,11 @@
 							</tr>
 							</thead>
 							<tbody>
-								@if ($user->order->count() > 0)
+								@if ($orders->count() > 0)
 									@php
-                                	$counter = 1;
-                                @endphp
-	                            	@foreach ($user->order as $order)
+                                		$counter = 1
+                                	@endphp
+	                            	@foreach ($orders as $order)
 										<tr>
 											<td>{{ $counter++ }}</td>
 											<td>{{ Carbon\Carbon::parse($order->created_at)->toDayDateTimeString() }}</td>

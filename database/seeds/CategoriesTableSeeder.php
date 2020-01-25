@@ -12,10 +12,9 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         $title1 = 'Burger';
-        $title2 = 'Salsa';
-        $title3 = 'Sushi';
-        $title4 = 'Drink';
-        $title5 = 'Pizza';
+        $title2 = 'Pasta';
+        $title3 = 'Pizza';
+        $title4 = 'Sushi';
         
         $cat1 = Category::create([
         	'title' => $title1,
@@ -35,11 +34,6 @@ class CategoriesTableSeeder extends Seeder
         $cat4 = Category::create([
         	'title' => $title4,
         	'slug' => str_slug($title4)
-        ]);
-
-        $cat5 = Category::create([
-        	'title' => $title5,
-        	'slug' => str_slug($title5)
         ]);
     }
 }

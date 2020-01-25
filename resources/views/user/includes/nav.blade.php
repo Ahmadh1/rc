@@ -60,6 +60,11 @@
                 <a href="#" class="text-primary">{{ Auth::user()->name }}</a>
                 <div class="dropdown-container">
                     <ul class="">
+                        @if (Auth::user()->admin)
+                            <li>
+                                <a href="{{route('dashboard')}}">Dashboard</a>
+                            </li>
+                        @endif 
                         <li>
                             <a href="{{ route('track') }}">Track Order</a>
                         </li>

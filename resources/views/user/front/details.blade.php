@@ -61,7 +61,7 @@
 	                                    
 	                                </tr>
 	                                <th colspan="3">
-	                                	<td>
+	                                	<td class="text-danger">
 	                                    	{{ $order->orderItems[0]->price }}
 	                                    </td>
 	                                </th>

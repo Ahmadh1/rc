@@ -74,7 +74,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function() {
   Route::group(['middleware' => 'admin'], function() {
-	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 	Route::resource('dishes', 'admin\DishesController');
 	Route::resource('categories', 'admin\CategoriesController');
 	Route::get('/orders', 'admin\OrdersController@index')->name('orders');
